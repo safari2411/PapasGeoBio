@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geographic Biography Timeline</title>
+    <!-- Leaflet CSS for World Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation / Header -->
+        <header class="top-header">
+            <div class="brand">
+                <span class="icon">📍</span>
+                <h1>GEOGRAPHIC BIOGRAPHY TIMELINE</h1>
+            </div>
+            <div class="subject-info">
+                <span class="subject-name">BIOGRAPHY SUBJECT</span>
+                <span class="divider">|</span>
+                <span class="stat-badge" id="total-places">8 Locations</span>
+            </div>
+        </header>
+
+        <!-- Main Content split layout -->
+        <main class="main-content">
+            <!-- Left Pane: Map -->
+            <section class="map-pane">
+                <div id="map"></div>
+                
+                <!-- Timeline Controls / Bottom Overlay -->
+                <div class="timeline-controls">
+                    <div class="slider-container">
+                        <span id="year-min">1939</span>
+                        <input type="range" id="time-slider" min="1939" max="2023" step="1" value="1970">
+                        <span id="year-max">2023</span>
+                        <div class="current-year-tooltip" id="slider-year-label">1970</div>
+                    </div>
+
+                    <div class="controls-bar">
+                        <div class="era-filters">
+                            <button class="filter-btn active" data-era="all">ALL ERAS</button>
+                            <button class="filter-btn" data-era="Youth">YOUTH</button>
+                            <button class="filter-btn" data-era="Academic">ACADEMIC</button>
+                            <button class="filter-btn" data-era="Grenoble">GRENOBLE</button>
+                            <button class="filter-btn" data-era="Paris">PARIS</button>
+                            <button class="filter-btn" data-era="BackIndo">BACK TO INDO</button>
+                            <button class="filter-btn" data-era="Germany">GERMANY</button>
+                            <button class="filter-btn" data-era="Leiden">LEIDEN</button>
+                            <button class="filter-btn" data-era="Leiderdorp">LEIDERDORP</button>
+                        </div>
+                        <button id="play-btn" class="play-btn">
+                            <span class="play-icon">▶</span> PLAY / PAUSE
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Pane: Narrative Scroll Feed -->
+            <section class="feed-pane" id="narrative-feed">
+                <div class="feed-header">
+                    <h2>Chronological Journey</h2>
+                    <p>Scroll or click a card to navigate the map</p>
+                </div>
+                <div class="cards-container" id="cards-container">
+                    <!-- Cards dynamically loaded here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
