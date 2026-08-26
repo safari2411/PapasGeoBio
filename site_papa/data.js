@@ -83,7 +83,7 @@ const bioData = [
         lat: 52.163534395632674, 
         lng: 4.467696716211034,
         era: "Leiden",
-        title: "Leiden & some small surrounding villages",
+        title: "Leiden & nearby villages",
         description: "First studied, then worked in Leiden and Amsterdam."
     },
     {
