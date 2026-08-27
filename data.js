@@ -78,7 +78,7 @@ const bioData = [
         id: 7,
         yearStart: 1969,
         yearEnd: 2006,
-        yearDisplay: "1969 – 2023",
+        yearDisplay: "1969 – 2006",
         location: "Leiden",
         lat: 52.163534395632674, 
         lng: 4.467696716211034,
